@@ -1,62 +1,28 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monique Loren | Mentoria</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <style>
-        :root { --dourado: #d4af37; --preto: #1a1a1a; --branco: #ffffff; }
-        body { font-family: 'Montserrat', sans-serif; margin: 0; color: var(--preto); }
-        
-        /* Banner Principal - Baseado na Imagem 5 */
-        .hero { 
-            height: 80vh; 
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://seu-link-de-imagem-aqui.jpg'); 
-            display: flex; align-items: center; justify-content: center; text-align: center; color: white;
-        }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3rem; }
-        .hero span { background: var(--preto); color: var(--dourado); padding: 5px 20px; text-transform: uppercase; }
+<style>
+    /* Ajuste específico para o novo Banner */
+    header {
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('hero-banner.jpg'); 
+        background-size: cover;
+        background-position: center;
+        height: 80vh; /* Altura ideal para widescreen */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--branco);
+        padding: 0 20px;
+    }
 
-        /* Seções - Baseado na Imagem 1, 2 e 6 */
-        section { padding: 60px 20px; max-width: 1000px; margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-        .tag { background: var(--dourado); padding: 5px 10px; font-weight: bold; margin-bottom: 10px; display: inline-block; }
-        img { width: 100%; border-radius: 8px; box-shadow: 15px 15px 0 var(--dourado); }
+    /* Removemos o texto do HTML que já está na imagem para não sobrepor, 
+       ou mantemos apenas o botão se a imagem for apenas fundo. 
+       Como a imagem já tem o texto, vamos deixar o conteúdo do hero limpo: */
+    .hero-content {
+        margin-top: 200px; /* Empurra o botão para baixo do texto da imagem */
+    }
+</style>
 
-        @media (max-width: 768px) { section { grid-template-columns: 1fr; text-align: center; } }
-    </style>
-</head>
-<body>
-
-    <header class="hero">
-        <div>
-            <h1>Porque eu posso te ensinar a ser<br><span>REFERÊNCIA</span><br>na Estética</h1>
-        </div>
-    </header>
-
-    <section>
-        <div>
-            <img src="https://link-da-imagem-trajetoria.jpg" alt="Monique Loren">
-        </div>
-        <div>
-            <span class="tag">Minha trajetória</span>
-            <h2>8 anos transformando corpos e autoestima</h2>
-            <p>Especialista em Abdômen, Redução de medidas e Diástase.</p>
-        </div>
-    </section>
-
-    <section style="background: #f9f9f9; max-width: 100%;">
-        <div style="max-width: 1000px; margin: auto; display: inherit; grid-template-columns: inherit; gap: inherit;">
-            <div>
-                <span class="tag">De profissional para profissional</span>
-                <h2>Ensino Esteticistas a faturarem mais</h2>
-                <p>Te ensino a se posicionar para atrair clientes reais.</p>
-            </div>
-            <div>
-                <img src="https://link-da-imagem-mentoria.jpg" alt="Mentoria Monique Loren">
-            </div>
-        </div>
-    </section>
-
-</body>
-</html>
+<header>
+    <div class="hero-content">
+        <a href="#contato" class="btn-cta">Quero ser referência</a>
+    </div>
+</header>
