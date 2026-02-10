@@ -22,12 +22,12 @@
             background-color: var(--branco);
         }
 
-        /* Hero Section */
+        /* Hero Section - Baseado na Imagem 5 */
         header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1560750588-73207b1ef5b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* Imagem de fundo genérica de estética */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/capa-principal.jpg'); 
             background-size: cover;
             background-position: center;
-            height: 90vh;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -38,15 +38,19 @@
 
         .hero-content h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-size: 2.8rem;
             margin-bottom: 20px;
-            text-transform: uppercase;
         }
 
         .hero-content h1 span {
             color: var(--dourado);
             display: block;
             font-size: 4rem;
+            font-weight: bold;
+            background: #000; /* Destaque preto como na imagem */
+            padding: 5px 15px;
+            width: fit-content;
+            margin: 10px auto;
         }
 
         .btn-cta {
@@ -67,102 +71,110 @@
             transform: scale(1.05);
         }
 
-        /* Seções Gerais */
-        section { padding: 80px 20px; max-width: 1000px; margin: auto; }
-
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+        /* Grid e Seções */
+        section { padding: 80px 20px; max-width: 1100px; margin: auto; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
 
         .tag {
             background: var(--dourado);
             color: var(--preto);
-            padding: 5px 15px;
+            padding: 8px 15px;
             font-weight: bold;
             display: inline-block;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 20px; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 20px; color: var(--preto); }
 
-        /* Sobre / Trajetória */
-        .sobre { background-color: var(--cinza-claro); max-width: 100%; }
-        .sobre-container { max-width: 1000px; margin: auto; }
+        /* Estilo da imagem com borda dourada - Baseado na Imagem 1 e 6 */
+        .img-container { position: relative; }
+        .img-container img { width: 100%; border-radius: 5px; position: relative; z-index: 2; }
+        .img-container::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100%;
+            height: 100%;
+            border: 5px solid var(--dourado);
+            z-index: 1;
+        }
 
-        /* Diferencial */
-        .diferencial { text-align: center; background-color: var(--preto); color: white; max-width: 100%; }
+        /* Diferencial - Imagem 3 */
+        .diferencial { background-color: var(--preto); color: var(--branco); text-align: center; max-width: 100%; }
         .diferencial h2 { color: var(--dourado); }
 
-        /* Footer / CTA Final */
-        footer { background: var(--branco); text-align: center; padding: 60px 20px; border-top: 5px solid var(--dourado); }
-        .insta-link { color: var(--dourado); font-weight: bold; text-decoration: none; font-size: 1.2rem; }
+        /* Rodapé - Imagem 4 */
+        footer { background: var(--branco); text-align: center; padding: 80px 20px; border-top: 8px solid var(--dourado); }
+        .insta-handle { font-size: 1.5rem; font-weight: bold; color: var(--preto); margin: 20px 0; display: block; text-decoration: none;}
 
         @media (max-width: 768px) {
             .grid { grid-template-columns: 1fr; }
-            .hero-content h1 { font-size: 2rem; }
-            .hero-content h1 span { font-size: 2.5rem; }
+            .hero-content h1 { font-size: 1.8rem; }
+            .hero-content h1 span { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- HERO SECTION (Baseado na imagem 5) -->
     <header>
         <div class="hero-content">
-            <h1>Porque eu posso te ensinar a ser <span>REFERÊNCIA</span> na Estética</h1>
-            <p>Transforme sua carreira com quem domina a prática e resultados reais.</p>
+            <h1>Porque eu posso te ensinar a ser</h1>
+            <span>REFERÊNCIA</span>
+            <h2>na Estética</h2>
             <a href="#contato" class="btn-cta">Quero ser referência</a>
         </div>
     </header>
 
-    <!-- SOBRE E TRAJETÓRIA (Baseado nas imagens 1 e 6) -->
-    <section class="sobre">
-        <div class="sobre-container">
-            <div class="grid">
-                <div>
-                    <!-- Espaço para a foto da Monique atuando -->
-                    <img src="https://via.placeholder.com/450x600" alt="Monique Loren" style="width:100%; border-radius: 10px; box-shadow: 20px 20px 0 var(--dourado);">
-                </div>
-                <div>
-                    <span class="tag">Minha Trajetória</span>
-                    <h2>8 anos transformando vidas</h2>
-                    <p>Estou há mais de 8 anos na Estética, ajudando mulheres a transformarem seus corpos e sua autoestima.</p>
-                    <p>Como <strong>Especialista em Abdômen</strong>, foquei minha carreira em Redução de Medidas, Emagrecimento e Diástase, conduzindo centenas de atendimentos com resultados reais e comprovados.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MENTORIA (Baseado na imagem 2) -->
     <section>
         <div class="grid">
-            <div>
-                <span class="tag">De profissional para profissional</span>
-                <h2>Ensino o que as faculdades não mostram</h2>
-                <p>Além de atender em minha clínica, hoje minha missão é ensinar Esteticistas a se tornarem especialistas de verdade.</p>
-                <p>Te ajudo a se posicionar no mercado para atrair os clientes certos e, consequentemente, faturar muito mais com o seu trabalho.</p>
+            <div class="img-container">
+                <img src="img/monique-atendimento.jpg" alt="Monique Loren em atendimento">
             </div>
             <div>
-                <img src="https://via.placeholder.com/500x350" alt="Mentoria Estética" style="width:100%; border-radius: 10px;">
+                <span class="tag">Minha trajetória</span>
+                <h2>8 anos transformando vidas e corpos</h2>
+                <p>Estou há mais de 8 anos na Estética, ajudando mulheres a transformarem seus corpos e sua autoestima.</p>
+                <p>Como <strong>Especialista em Abdômen</strong>, me especializei em Redução de medidas, emagrecimento e Diástase, conduzindo centenas de atendimentos com resultados reais.</p>
             </div>
         </div>
     </section>
 
-    <!-- DIFERENCIAL (Baseado na imagem 3) -->
+    <section style="background-color: var(--cinza-claro); max-width: 100%;">
+        <div style="max-width: 1100px; margin: auto;" class="grid">
+            <div>
+                <span class="tag">De profissional para profissional</span>
+                <h2>Ensino o que vivi na prática</h2>
+                <p>Além de atender, ensino Esteticistas a se tornarem Especialistas e a se posicionarem para atrair clientes e faturar mais.</p>
+                <p>Meu foco é tirar você da teoria dos livros e te levar para o faturamento consistente.</p>
+            </div>
+            <div class="img-container">
+                <img src="img/monique-mentoria.jpg" alt="Mentoria Monique Loren">
+            </div>
+        </div>
+    </section>
+
     <section class="diferencial">
-        <span class="tag">O meu diferencial</span>
-        <h2>Chega de teorias de livros...</h2>
-        <p style="max-width: 700px; margin: 20px auto; font-size: 1.2rem;">
-            Eu não ensino apenas o que li. Eu ensino o que <strong>vivi, testei e aplico até hoje</strong> na prática da minha clínica. É o campo de batalha levado para o seu aprendizado.
+        <span class="tag">O Diferencial</span>
+        <h2>Chega de apenas teoria...</h2>
+        <p style="max-width: 800px; margin: auto; font-size: 1.2rem;">
+            Não ensino teoria de livros... ensino o que <strong>vivi, testei e aplico até hoje</strong> na prática em minha clínica.
         </p>
     </section>
 
-    <!-- CTA FINAL (Baseado na imagem 4) -->
     <footer id="contato">
-        <h2>Chegou a sua hora!</h2>
-        <p>Se você quer ser reconhecida, valorizada e alcançar um faturamento consistente, esse é o lugar certo para você.</p>
-        <a href="https://instagram.com/moniqueloren.mentora" class="btn-cta">Começar agora</a>
-        <br><br>
-        <p>Siga no Instagram: <a href="https://instagram.com/moniqueloren.mentora" class="insta-link">@moniqueloren.mentora</a></p>
-        <img src="https://via.placeholder.com/150x50?text=LOGOTIPO" alt="Monique Loren Logo" style="margin-top: 40px; opacity: 0.6;">
+        <h2>Chegou a sua hora de ser reconhecida</h2>
+        <p>Se você quer ser valorizada e alcançar faturamento consistente, esse é o lugar certo.</p>
+        
+        <a href="https://instagram.com/moniqueloren.mentora" target="_blank" class="insta-handle">
+            @moniqueloren.mentora
+        </a>
+
+        <a href="https://wa.me/SEUNUMERO" class="btn-cta">Entrar na Mentoria</a>
+        
+        <div style="margin-top: 50px;">
+            <img src="img/logo-monique.png" alt="Logo Monique Loren" style="max-width: 200px;">
+        </div>
     </footer>
 
 </body>
