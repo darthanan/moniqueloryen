@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monique Loren | Mentoria para Esteticistas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dourado: #d4af37;
+            --dourado-escuro: #b8962e;
+            --preto: #1a1a1a;
+            --cinza-claro: #f4f4f4;
+            --branco: #ffffff;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--preto);
+            background-color: var(--branco);
+        }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1560750588-73207b1ef5b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* Imagem de fundo genérica de estética */
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--branco);
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero-content h1 span {
+            color: var(--dourado);
+            display: block;
+            font-size: 4rem;
+        }
+
+        .btn-cta {
+            background-color: var(--dourado);
+            color: var(--preto);
+            padding: 18px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            text-transform: uppercase;
+            transition: 0.3s;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--dourado-escuro);
+            transform: scale(1.05);
+        }
+
+        /* Seções Gerais */
+        section { padding: 80px 20px; max-width: 1000px; margin: auto; }
+
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+
+        .tag {
+            background: var(--dourado);
+            color: var(--preto);
+            padding: 5px 15px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 20px; }
+
+        /* Sobre / Trajetória */
+        .sobre { background-color: var(--cinza-claro); max-width: 100%; }
+        .sobre-container { max-width: 1000px; margin: auto; }
+
+        /* Diferencial */
+        .diferencial { text-align: center; background-color: var(--preto); color: white; max-width: 100%; }
+        .diferencial h2 { color: var(--dourado); }
+
+        /* Footer / CTA Final */
+        footer { background: var(--branco); text-align: center; padding: 60px 20px; border-top: 5px solid var(--dourado); }
+        .insta-link { color: var(--dourado); font-weight: bold; text-decoration: none; font-size: 1.2rem; }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 2rem; }
+            .hero-content h1 span { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION (Baseado na imagem 5) -->
+    <header>
+        <div class="hero-content">
+            <h1>Porque eu posso te ensinar a ser <span>REFERÊNCIA</span> na Estética</h1>
+            <p>Transforme sua carreira com quem domina a prática e resultados reais.</p>
+            <a href="#contato" class="btn-cta">Quero ser referência</a>
+        </div>
+    </header>
+
+    <!-- SOBRE E TRAJETÓRIA (Baseado nas imagens 1 e 6) -->
+    <section class="sobre">
+        <div class="sobre-container">
+            <div class="grid">
+                <div>
+                    <!-- Espaço para a foto da Monique atuando -->
+                    <img src="https://via.placeholder.com/450x600" alt="Monique Loren" style="width:100%; border-radius: 10px; box-shadow: 20px 20px 0 var(--dourado);">
+                </div>
+                <div>
+                    <span class="tag">Minha Trajetória</span>
+                    <h2>8 anos transformando vidas</h2>
+                    <p>Estou há mais de 8 anos na Estética, ajudando mulheres a transformarem seus corpos e sua autoestima.</p>
+                    <p>Como <strong>Especialista em Abdômen</strong>, foquei minha carreira em Redução de Medidas, Emagrecimento e Diástase, conduzindo centenas de atendimentos com resultados reais e comprovados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENTORIA (Baseado na imagem 2) -->
+    <section>
+        <div class="grid">
+            <div>
+                <span class="tag">De profissional para profissional</span>
+                <h2>Ensino o que as faculdades não mostram</h2>
+                <p>Além de atender em minha clínica, hoje minha missão é ensinar Esteticistas a se tornarem especialistas de verdade.</p>
+                <p>Te ajudo a se posicionar no mercado para atrair os clientes certos e, consequentemente, faturar muito mais com o seu trabalho.</p>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/500x350" alt="Mentoria Estética" style="width:100%; border-radius: 10px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFERENCIAL (Baseado na imagem 3) -->
+    <section class="diferencial">
+        <span class="tag">O meu diferencial</span>
+        <h2>Chega de teorias de livros...</h2>
+        <p style="max-width: 700px; margin: 20px auto; font-size: 1.2rem;">
+            Eu não ensino apenas o que li. Eu ensino o que <strong>vivi, testei e aplico até hoje</strong> na prática da minha clínica. É o campo de batalha levado para o seu aprendizado.
+        </p>
+    </section>
+
+    <!-- CTA FINAL (Baseado na imagem 4) -->
+    <footer id="contato">
+        <h2>Chegou a sua hora!</h2>
+        <p>Se você quer ser reconhecida, valorizada e alcançar um faturamento consistente, esse é o lugar certo para você.</p>
+        <a href="https://instagram.com/moniqueloren.mentora" class="btn-cta">Começar agora</a>
+        <br><br>
+        <p>Siga no Instagram: <a href="https://instagram.com/moniqueloren.mentora" class="insta-link">@moniqueloren.mentora</a></p>
+        <img src="https://via.placeholder.com/150x50?text=LOGOTIPO" alt="Monique Loren Logo" style="margin-top: 40px; opacity: 0.6;">
+    </footer>
+
+</body>
+</html>
