@@ -3,179 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monique Loren | Mentoria para Esteticistas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Monique Loren | Mentoria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --dourado: #d4af37;
-            --dourado-escuro: #b8962e;
-            --preto: #1a1a1a;
-            --cinza-claro: #f4f4f4;
-            --branco: #ffffff;
+        :root { --dourado: #d4af37; --preto: #1a1a1a; --branco: #ffffff; }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; color: var(--preto); }
+        
+        /* Banner Principal - Baseado na Imagem 5 */
+        .hero { 
+            height: 80vh; 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://seu-link-de-imagem-aqui.jpg'); 
+            display: flex; align-items: center; justify-content: center; text-align: center; color: white;
         }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3rem; }
+        .hero span { background: var(--preto); color: var(--dourado); padding: 5px 20px; text-transform: uppercase; }
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            color: var(--preto);
-            background-color: var(--branco);
-        }
+        /* Seções - Baseado na Imagem 1, 2 e 6 */
+        section { padding: 60px 20px; max-width: 1000px; margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+        .tag { background: var(--dourado); padding: 5px 10px; font-weight: bold; margin-bottom: 10px; display: inline-block; }
+        img { width: 100%; border-radius: 8px; box-shadow: 15px 15px 0 var(--dourado); }
 
-        /* Hero Section - Baseado na Imagem 5 */
-        header {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/capa-principal.jpg'); 
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--branco);
-            padding: 0 20px;
-        }
-
-        .hero-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-        }
-
-        .hero-content h1 span {
-            color: var(--dourado);
-            display: block;
-            font-size: 4rem;
-            font-weight: bold;
-            background: #000; /* Destaque preto como na imagem */
-            padding: 5px 15px;
-            width: fit-content;
-            margin: 10px auto;
-        }
-
-        .btn-cta {
-            background-color: var(--dourado);
-            color: var(--preto);
-            padding: 18px 35px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            text-transform: uppercase;
-            transition: 0.3s;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        .btn-cta:hover {
-            background-color: var(--dourado-escuro);
-            transform: scale(1.05);
-        }
-
-        /* Grid e Seções */
-        section { padding: 80px 20px; max-width: 1100px; margin: auto; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-
-        .tag {
-            background: var(--dourado);
-            color: var(--preto);
-            padding: 8px 15px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-
-        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 20px; color: var(--preto); }
-
-        /* Estilo da imagem com borda dourada - Baseado na Imagem 1 e 6 */
-        .img-container { position: relative; }
-        .img-container img { width: 100%; border-radius: 5px; position: relative; z-index: 2; }
-        .img-container::after {
-            content: '';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 100%;
-            height: 100%;
-            border: 5px solid var(--dourado);
-            z-index: 1;
-        }
-
-        /* Diferencial - Imagem 3 */
-        .diferencial { background-color: var(--preto); color: var(--branco); text-align: center; max-width: 100%; }
-        .diferencial h2 { color: var(--dourado); }
-
-        /* Rodapé - Imagem 4 */
-        footer { background: var(--branco); text-align: center; padding: 80px 20px; border-top: 8px solid var(--dourado); }
-        .insta-handle { font-size: 1.5rem; font-weight: bold; color: var(--preto); margin: 20px 0; display: block; text-decoration: none;}
-
-        @media (max-width: 768px) {
-            .grid { grid-template-columns: 1fr; }
-            .hero-content h1 { font-size: 1.8rem; }
-            .hero-content h1 span { font-size: 2.2rem; }
-        }
+        @media (max-width: 768px) { section { grid-template-columns: 1fr; text-align: center; } }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="hero-content">
-            <h1>Porque eu posso te ensinar a ser</h1>
-            <span>REFERÊNCIA</span>
-            <h2>na Estética</h2>
-            <a href="#contato" class="btn-cta">Quero ser referência</a>
+    <header class="hero">
+        <div>
+            <h1>Porque eu posso te ensinar a ser<br><span>REFERÊNCIA</span><br>na Estética</h1>
         </div>
     </header>
 
     <section>
-        <div class="grid">
-            <div class="img-container">
-                <img src="img/monique-atendimento.jpg" alt="Monique Loren em atendimento">
-            </div>
-            <div>
-                <span class="tag">Minha trajetória</span>
-                <h2>8 anos transformando vidas e corpos</h2>
-                <p>Estou há mais de 8 anos na Estética, ajudando mulheres a transformarem seus corpos e sua autoestima.</p>
-                <p>Como <strong>Especialista em Abdômen</strong>, me especializei em Redução de medidas, emagrecimento e Diástase, conduzindo centenas de atendimentos com resultados reais.</p>
-            </div>
+        <div>
+            <img src="https://link-da-imagem-trajetoria.jpg" alt="Monique Loren">
+        </div>
+        <div>
+            <span class="tag">Minha trajetória</span>
+            <h2>8 anos transformando corpos e autoestima</h2>
+            <p>Especialista em Abdômen, Redução de medidas e Diástase.</p>
         </div>
     </section>
 
-    <section style="background-color: var(--cinza-claro); max-width: 100%;">
-        <div style="max-width: 1100px; margin: auto;" class="grid">
+    <section style="background: #f9f9f9; max-width: 100%;">
+        <div style="max-width: 1000px; margin: auto; display: inherit; grid-template-columns: inherit; gap: inherit;">
             <div>
                 <span class="tag">De profissional para profissional</span>
-                <h2>Ensino o que vivi na prática</h2>
-                <p>Além de atender, ensino Esteticistas a se tornarem Especialistas e a se posicionarem para atrair clientes e faturar mais.</p>
-                <p>Meu foco é tirar você da teoria dos livros e te levar para o faturamento consistente.</p>
+                <h2>Ensino Esteticistas a faturarem mais</h2>
+                <p>Te ensino a se posicionar para atrair clientes reais.</p>
             </div>
-            <div class="img-container">
-                <img src="img/monique-mentoria.jpg" alt="Mentoria Monique Loren">
+            <div>
+                <img src="https://link-da-imagem-mentoria.jpg" alt="Mentoria Monique Loren">
             </div>
         </div>
     </section>
-
-    <section class="diferencial">
-        <span class="tag">O Diferencial</span>
-        <h2>Chega de apenas teoria...</h2>
-        <p style="max-width: 800px; margin: auto; font-size: 1.2rem;">
-            Não ensino teoria de livros... ensino o que <strong>vivi, testei e aplico até hoje</strong> na prática em minha clínica.
-        </p>
-    </section>
-
-    <footer id="contato">
-        <h2>Chegou a sua hora de ser reconhecida</h2>
-        <p>Se você quer ser valorizada e alcançar faturamento consistente, esse é o lugar certo.</p>
-        
-        <a href="https://instagram.com/moniqueloren.mentora" target="_blank" class="insta-handle">
-            @moniqueloren.mentora
-        </a>
-
-        <a href="https://wa.me/SEUNUMERO" class="btn-cta">Entrar na Mentoria</a>
-        
-        <div style="margin-top: 50px;">
-            <img src="img/logo-monique.png" alt="Logo Monique Loren" style="max-width: 200px;">
-        </div>
-    </footer>
 
 </body>
 </html>
